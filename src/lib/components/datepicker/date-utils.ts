@@ -20,8 +20,8 @@ export function getCalendarDays(value: Dayjs, weekStartsOn: number): Dayjs[] {
 	}
 	days = days.concat(getMonthDays(value.startOf('month')));
 
-	// const daysAfter = 42 - days.length;
-	const daysAfter = 35 - days.length;
+	const daysAfter = 42 - days.length;
+	//const daysAfter = 35 - days.length;
 	days = days.concat(getMonthDays(value.add(1, 'month').startOf('month')).slice(0, daysAfter));
 
 	return days;

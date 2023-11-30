@@ -410,7 +410,7 @@
 					{/each}
 				</div>
 
-				<div class="overflow-hidden h-[calc(100%-2rem)] relative w-full">
+				<div class="overflow-auto h-[calc(100%-2rem)] relative w-full">
 					{#key calendarDays}
 						<div
 							class="absolute inset-0 p-3 h-full"
@@ -418,7 +418,7 @@
 							out:fly|local={{ x: transitionDirection === 'forward' ? -250 : 250, duration: 250 }}
 						>
 							<!-- eslint-disable-next-line  @typescript-eslint/no-unused-vars -->
-							{#each Array(5) as _, weekIndex}
+							{#each Array(6) as _, weekIndex}
 								<div class="date-container flex items-center justify-evenly h-[20%]">
 									{#each calendarDays.slice(weekIndex * 7, weekIndex * 7 + 7) as calendarDay}
 										{#if !dayIsInRange(calendarDay)}
